@@ -1,0 +1,27 @@
+ <form action="/actualizar/{{data.UsuarioID}}" method="post">
+       
+          <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label">Nombre</label>
+            <input type="text" class="form-control" value="{{data.Nombre}}" name="Nombre" id="formGroupExampleInput" >
+          </div>
+          <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label">Apellido</label>
+            <input type="text" class="form-control" value="{{data.Apellido}}" name="Apellido" id="formGroupExampleInput">
+          </div>
+          <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label">Correo</label>
+            <input type="email" class="form-control" value="{{data.Email}}" name="Email" id="formGroupExampleInput">
+          </div>
+          <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label">Usuario</label>
+            <input type="text" class="form-control" value="{{data.Username}}" name="Username" id="formGroupExampleInput">
+          </div>
+          <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" value="{{data.Pass}}" name="Pass" id="formGroupExampleInput">
+          </div>
+          <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+      </div>
+        </form>

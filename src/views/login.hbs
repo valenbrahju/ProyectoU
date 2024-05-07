@@ -1,0 +1,57 @@
+<!-- login --->
+ 
+<div class="main-container">
+  <div class="container" id="container">
+    <div class="form-container sign-up-container">
+      <form action="/guardar" method="post">
+        <h1>Create Account</h1>
+        <input type="text" name = "Nombre" placeholder="Nombre" />
+        <input type="text" name = "Apellido" placeholder="Apellido" />
+        <input type="email" name = "Email" placeholder="Email" />        
+        <input type="text" name = "Username" placeholder="Usuario" />
+        <input type="password" name = "Pass" placeholder="Password" />
+        <button type="submit" id="registerButton">Sign Up</button>
+      </form>
+    </div>
+    <div class="form-container sign-in-container">
+      <form action="/auth" method="post">
+        <h1>Sign in</h1>
+        <input type="text" name="Username" placeholder="User" />
+        <input type="password" name="Pass" placeholder="Password" />
+        <a class="contenedorpassword"  href="#">Forgot your password?</a>
+        <button type="submit" id ="loginButton">Sign In</button>
+      </form>
+    </div>
+    <div class="overlay-container">
+      <div class="overlay">
+        <div class="overlay-panel overlay-left">
+          <h1>Welcome Back!</h1>
+          <p>To keep connected with us please login with your personal info</p>
+          <button class="ghost" id="signIn">Sign In</button>
+        </div>
+        <div class="overlay-panel overlay-right">
+          <h1>Hello, Friend!</h1>
+          <p>Enter your personal details and start journey with us</p>
+          <button class="ghost" id="signUp">Sign Up</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br>
+  <br>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+ 
+{{#if alert}}
+<script>
+    Swal.fire({
+      title: '{{ alert.alertTitle }}',
+      text: '{{ alert.alertMessage }}',
+      icon: '{{ alert.alertIcon }}',
+      showConfirmButton: '{{ alert.showConfirmButton }}',
+      timer: '{{ alert.timer }}',
+    }).then(() => { 
+     window.location = '{{ alert.ruta }}'
+    });
+</script>
+{{/if}}

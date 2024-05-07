@@ -1,0 +1,34 @@
+<h2>Bienvenido: 
+   {{#if user}}
+    {{user.Nombre}}
+    {{/if}}
+</h2>
+<hr>
+{{>buscarP}}
+<a type="button" href="/logout" class="btn btn-primary">Cerrar Sesion</a>
+<hr>
+{{>btnInsertarP}}
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellido</th>
+      <th scope="col">Usuario</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each data}}
+    <tr>
+      <td>{{UsuarioID}}</th>
+      <td>{{Nombre}}</td>
+      <td>{{Apellido}}</td>
+      <td>{{Username}}</td>
+      <td><!---<button class="btn btn-primary" type="submit">Eliminar</button>--->
+        <a href="/eliminar/{{UsuarioID}}" class="btn btn-primary">Eliminar</a>
+        <a href="/editar/{{UsuarioID}}" class="btn btn-primary">Editar</a>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
