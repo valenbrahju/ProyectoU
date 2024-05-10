@@ -3,6 +3,7 @@ config();
 
 export default {
     port : process.env.PORT,
+    portbd : process.env.PORTBD,
     user : process.env.USER,
     password : process.env.PASSWORD,
     server : process.env.SERVER,

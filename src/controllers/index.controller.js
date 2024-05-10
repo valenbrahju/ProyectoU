@@ -32,11 +32,37 @@ indexcontroller.servicios = (req, res) => {
     })
 }
 
-indexcontroller.testimonios = (req, res) => {
+indexcontroller.testimonios = async (req, res) => {
 
-    res.render('testimonios', {
-        title: 'Testimonios'
-    })
+    try {
+        const con = await getConnection()
+        const resultado = await con.request().query('select * From opiniones')
+        
+        res.render('testimonios', {
+            title: 'Testimonios',
+            data: resultado.recordset
+        })
+    } catch (error) {
+        console.log(error)
+    }
+
+   
+}
+
+indexcontroller.comentar = async (req, res) => {
+
+    try {
+
+        const con = await getConnection()
+        const { name, email, msg } = req.body
+        await con.request().query("insert into opiniones (nombre, correo, mensaje) values  ('" + name + "', '" + email + "', '" + msg + "')")
+
+        res.redirect('testimonios')
+
+
+    } catch (error) {
+        console.log(error)
+    }
 }
 
 indexcontroller.dashboard  = async (req, res) => {

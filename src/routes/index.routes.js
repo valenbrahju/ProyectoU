@@ -15,4 +15,5 @@ router.post('/actualizar/:UsuarioID', indexcontroller.actualizarPersona)
 router.post('/auth', indexcontroller.auth)
 router.get('/logout', indexcontroller.logout)
 router.get('/dashboardNew', indexcontroller.dashboardNew)
+router.post('/comentar', indexcontroller.comentar)
 export default router

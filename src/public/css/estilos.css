@@ -184,7 +184,7 @@ header {
 
 
 .main-container h1 {
-    color: #EFEFEF;
+    color: #353A40;
 }
 
 button {
@@ -382,4 +382,94 @@ input {
 .overlay-panel.overlay-right p {
     color: #353A40; /* Cambia el color */
     margin-top: 20px;
+}
+
+/*testimonios*/
+
+@media(min-width:568px){
+    .end{
+        margin-left: auto;
+    }
+}
+
+@media(max-width:768px){
+    #post{
+        width: 100%;
+    }
+}
+
+
+#post{
+    margin: 10px;
+    padding: 6px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-align: center;
+    background-color: darkgrey; 
+    color: black;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 13px;
+    width: 100%;
+}
+
+
+
+
+.comments{
+    margin-top: 5%;
+    margin-left: 20px;
+}
+
+.comment{
+    border: 1px solid rgb(60, 61, 61);
+    background-color:#33373E;
+    float: left;
+    border-radius: 5px;
+    padding-left: 40px;
+    padding-right: 30px;
+    padding-top: 10px;
+    
+}
+.comment h4,.comment span{
+    display: inline;
+
+}
+
+.comment p,.comment span{
+    color: #fffbfb; 
+}
+
+
+label{
+    color: #353A40;
+}
+
+
+.form-group p a{
+    color: black;
+}
+
+
+
+.form-group input,.form-group textarea{
+    background-color: #ffffff; 
+    border: 1px solid #EFEFEF;
+    border-radius: 12px;
+}
+
+form{
+    border: 1px solid #F2C36B;
+    background-color: #F2C36B;
+    border-radius: 5px;
+    padding: 20px;
+ }
+
+.container_comments{
+    margin-top: 40px;
+    margin-left: 40px;
+}
+
+.container_comments h4{
+  color: black;
 }
